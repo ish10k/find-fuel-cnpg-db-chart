@@ -1,0 +1,20 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ .Values.cluster.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  instances: {{ .Values.cluster.instances }}
+  storage:
+    size: 10Gi
+  imageName: postgis/postgis:15-3.3
+  bootstrap:
+    initdb:
+      database: {{ .Values.secrets.postgres.dbName }}
+      owner: {{ .Values.secrets.postgres.dbUser }}
+      secret:
+        name: postgres-secret
+  service:
+    type: ClusterIP
+  monitoring:
+    enablePodMonitor: true

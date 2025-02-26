@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cnpg-operator
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: cnpg-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cnpg-operator
+  template:
+    metadata:
+      labels:
+        app: cnpg-operator
+    spec:
+      serviceAccountName: cnpg-operator
+      containers:
+        - name: operator
+          image: ghcr.io/cloudnative-pg/cloudnative-pg:1.22.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

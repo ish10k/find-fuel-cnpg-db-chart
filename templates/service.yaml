@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.cluster.name }}-svc"
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.cluster.name }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5432
+      targetPort: 5432
+      protocol: TCP
+      name: postgres
+  selector:
+    app.kubernetes.io/name: {{ .Values.cluster.name }}

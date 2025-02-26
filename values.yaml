@@ -1,0 +1,16 @@
+namespace: cnpg-db
+
+cluster:
+  name: postgres-cluster
+  instances: 3
+  storageSize: 10Gi
+
+secrets:
+  postgres:
+    secretName: postgres-secret
+    dbName: postgres
+    dbUser: postgres
+    dbPassword: postgres
+
+flags:
+  enablePostgis: true
