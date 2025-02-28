@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cnpg-operator
-  namespace: argocd
+  name: {{ .Values.argoApplication.name }}
+  namespace: {{ .Values.argoApplication.namespace }}
 spec:
   project: default
   source:
@@ -11,7 +11,7 @@ spec:
     chart: cloudnative-pg
   destination:
     server: https://kubernetes.default.svc
-    namespace: cnpg-db
+    namespace: {{ .Values.namespace }}
   syncPolicy:
     automated:
       prune: true

@@ -1,8 +1,8 @@
 namespace: cnpg-db
 
-operator:
-  name: cnpg-operator
-  serviceAccountName: cnpg-operator-serviceaccount
+argoApplication:
+  name: cnpg-app
+  namespace: argocd
 
 cluster:
   name: postgres-cluster
