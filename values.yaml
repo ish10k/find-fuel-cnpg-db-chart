@@ -2,6 +2,7 @@ namespace: cnpg-db
 
 operator:
   name: cnpg-operator
+  serviceAccountName: cnpg-operator-serviceaccount
 
 cluster:
   name: postgres-cluster

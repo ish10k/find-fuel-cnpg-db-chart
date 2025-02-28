@@ -15,7 +15,7 @@ spec:
       labels:
         app: {{ .Values.operator.name }}
     spec:
-      serviceAccountName: {{ .Values.operator.name }}
+      serviceAccountName: {{ .Values.operator.serviceAccountName }}
       containers:
         - name: operator
           image: ghcr.io/cloudnative-pg/cloudnative-pg:1.22.0
