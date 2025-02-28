@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cnpg-operator
+  name: {{ .Values.operator.name }}
   namespace: {{ .Values.namespace }}
   labels:
-    app: cnpg-operator
+    app: {{ .Values.operator.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cnpg-operator
+      app: {{ .Values.operator.name }}
   template:
     metadata:
       labels:
-        app: cnpg-operator
+        app: {{ .Values.operator.name }}
     spec:
-      serviceAccountName: cnpg-operator
+      serviceAccountName: {{ .Values.operator.name }}
       containers:
         - name: operator
           image: ghcr.io/cloudnative-pg/cloudnative-pg:1.22.0

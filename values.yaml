@@ -1,5 +1,8 @@
 namespace: cnpg-db
 
+operator:
+  name: cnpg-operator
+
 cluster:
   name: postgres-cluster
   instances: 3
