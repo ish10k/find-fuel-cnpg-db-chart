@@ -14,7 +14,5 @@ spec:
       owner: {{ .Values.secrets.postgres.dbUser }}
       secret:
         name: postgres-secret
-  service:
-    type: ClusterIP
   monitoring:
     enablePodMonitor: false
