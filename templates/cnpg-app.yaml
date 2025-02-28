@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/cloudnative-pg/charts
     targetRevision: main
-    chart: charts/cloudnative-pg
+    path: charts/cloudnative-pg
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
