@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/cloudnative-pg/cloudnative-pg
+    repoURL: https://github.com/cloudnative-pg/charts
     targetRevision: HEAD
     chart: cloudnative-pg
   destination:
