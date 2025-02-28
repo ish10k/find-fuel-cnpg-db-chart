@@ -1,7 +1,7 @@
 namespace: cnpg-db
 
-argoApplication:
-  name: cnpg-app
+operatorArgoApplication:
+  name: cnpg-operator
   namespace: argocd
 
 cluster:
