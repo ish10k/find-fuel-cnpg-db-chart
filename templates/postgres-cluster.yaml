@@ -7,7 +7,7 @@ spec:
   instances: {{ .Values.cluster.instances }}
   storage:
     size: 10Gi
-  imageName: ghcr.io/cloudnative-pg/postgresql:15.6
+  imageName: {{ .Values.cluster.imageName }}
   bootstrap:
     initdb:
       database: {{ .Values.secrets.postgres.dbName }}
