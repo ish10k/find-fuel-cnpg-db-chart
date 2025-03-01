@@ -13,6 +13,6 @@ spec:
       database: {{ .Values.secrets.postgres.dbName }}
       owner: {{ .Values.secrets.postgres.dbUser }}
       secret:
-        name: postgres-secret
+        name: {{ .Values.secrets.postgres.secretName }}
   monitoring:
     enablePodMonitor: false
