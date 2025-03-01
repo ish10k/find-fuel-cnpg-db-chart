@@ -14,8 +14,8 @@ secrets:
     secretName: postgres-secret
     dbName: postgres
     dbUser: postgres
-    dbUserAsBase64: cG9zdGdyZXM= # postgres
-    dbPasswordAsBase64: cG9zdGdyZXM= # postgres
+    dbUserAsBase64: cG9zdGdyZXM=
+    dbPasswordAsBase64: cG9zdGdyZXM=
 
 flags:
   enablePostgis: true
