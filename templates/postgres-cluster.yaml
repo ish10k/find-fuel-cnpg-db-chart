@@ -13,6 +13,7 @@ spec:
       owner: {{ .Values.secrets.postgres.initdb.dbUser }}
       secret:
         name: {{ .Values.secrets.postgres.initdb.secretName }}
+  enableSuperuserAccess: true   
   superuserSecret:
     name: {{ .Values.secrets.postgres.superuser.secretName }}
   monitoring:
