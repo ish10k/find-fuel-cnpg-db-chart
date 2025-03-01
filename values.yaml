@@ -12,10 +12,10 @@ cluster:
 secrets:
   postgres:
     secretName: postgres-secret
-    dbName: postgres
-    dbUser: postgres
-    dbUserAsBase64: cG9zdGdyZXM=
-    dbPasswordAsBase64: cG9zdGdyZXM=
+    dbName: test
+    dbUser: test
+    dbUserAsBase64: dGVzdA==
+    dbPasswordAsBase64: dGVzdA==
 
 flags:
   enablePostgis: true
