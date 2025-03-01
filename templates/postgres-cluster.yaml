@@ -10,9 +10,11 @@ spec:
   imageName: {{ .Values.cluster.imageName }}
   bootstrap:
     initdb:
-      database: {{ .Values.secrets.postgres.dbName }}
-      owner: {{ .Values.secrets.postgres.dbUser }}
+      database: {{ .Values.secrets.postgres.initdb.dbName }}
+      owner: {{ .Values.secrets.postgres.initdb.dbUser }}
       secret:
-        name: {{ .Values.secrets.postgres.secretName }}
+        name: {{ .Values.secrets.postgres.initdb.secretName }}
+  superuserSecret:
+    name: {{ .Values.secrets.postgres.superuser.secretName }}
   monitoring:
     enablePodMonitor: false
