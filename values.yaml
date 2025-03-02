@@ -8,7 +8,7 @@ cluster:
   name: postgres-cluster
   instances: 3
   storageSize: 10Gi
-  imageName: ghcr.io/cloudnative-pg/postgis:17
+  imageName: ghcr.io/cloudnative-pg/postgresql:17
 
 secrets:
   postgres:
