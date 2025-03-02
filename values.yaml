@@ -1,4 +1,4 @@
-namespace: cnpg-db
+namespace: find-fuel-cnpg-db
 
 operatorArgoApplication:
   name: cnpg-operator
