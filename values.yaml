@@ -9,7 +9,7 @@ cluster:
   instances: 3
   storageSize: 10Gi
   imageName: ghcr.io/cloudnative-pg/postgis:17-3.4
-  platform: linux/amd64
+  platform: linux/arm64
 
 secrets:
   postgres:
